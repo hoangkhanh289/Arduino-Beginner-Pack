@@ -1,0 +1,14 @@
+Hướng dẫn sử dụng ESP-NOW và Giao diện Tkinter
+
+Bước 1: Chạy tệp get_mac_address.ino trong thư mục Examples\espnow_tkinter\get_mac_address trên module RX để lấy địa chỉ MAC của nó.
+
+Bước 2: Nhập địa chỉ MAC vừa lấy được vào biến uint8_t broadcastAddress[] = { }; trong tệp Py_to_espnow_TX.ino, nằm tại thư mục Examples\espnow_tkinter\Py_to_espnow_TX.
+
+Bước 3: Nạp code cho cả hai module TX và RX.
+
+Bước 4: Chạy tệp tkinter1.py trong thư mục Examples\espnow_tkinter.
+
+Lưu ý:
+
+Vì ESP chỉ có một cổng serial, trước khi chạy file tkinter1.py, bạn cần đảm bảo rằng cổng serial đã được đóng để tránh xung đột.
+ESP-NOW có thể hoạt động ở khoảng cách lên đến 500m, tuy nhiên, để đạt được phạm vi này, bạn có thể cần điều chỉnh một số thông số. Với mã mẫu hiện tại, khoảng cách hiệu quả là khoảng 50-100m.
